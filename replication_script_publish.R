@@ -602,7 +602,7 @@ for(curr_cat_prob in c(0.005, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.
 d$cat_prob<-as.numeric(d$cat_prob)
 
 ggplot(subset(d, n <=150), aes(x = n, y = p, color = factor(cat_prob))) +
-  geom_hline(yintercept = 0, linetype="dotted", black = "black", size=0.6) + 
+  geom_hline(yintercept = 0, linetype="dotted", color = "black", size=0.6) + 
   geom_smooth(aes(x = n, y = p, color = factor(cat_prob)),size = 1.2, se=FALSE, span=0.6)+ 
   scale_color_manual(values=c("lightblue1", "lightblue2", "lightblue3", "lightcyan3","cyan1", "cyan2", "cyan3",
                               "blue1", "blue2", "blue3", "blue4", 
